@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 05:42:13 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9DMzVQRk87MjAyMy0wOS0yMDswNToxNDo0MSBQTTszMzMx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9DMzVQRk87MjAyMy0wOS0yMDswNTo0MjoxMyBQTTsxOzM0Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="unitprice" type="Real" array="False" size=""/>
+            <declare name="extendedprice" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="quantity"/>
+            <if expression="quantity&gt;=1000">
+                <then>
+                    <assign variable="unitprice" expression="3.00"/>
+                </then>
+                <else>
+                    <assign variable="unitprice" expression="5.00"/>
+                </else>
+            </if>
+            <assign variable="extendedprice" expression="quantity * unitprice"/>
+            <assign variable="tax" expression="extendedprice * 0.07"/>
+            <assign variable="total" expression="extendedprice + tax"/>
+            <output expression="&quot;Your qty is&quot; &amp;quantity" newline="True"/>
+            <output expression="&quot;Your unit price is&quot; &amp;unitprice" newline="True"/>
+            <output expression="&quot;Your extended price is&quot; &amp;extendedprice" newline="True"/>
+            <output expression="&quot; Your tax is&quot; &amp;tax" newline="True"/>
+            <output expression="&quot;Your total is&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

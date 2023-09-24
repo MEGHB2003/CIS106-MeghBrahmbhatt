@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 08:12:58 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTJEVDFKRlE7MjAyMy0wOS0yMTsxMTo1NDoxOCBBTTszMzE5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTJEVDFKRlE7MjAyMy0wOS0yMTsxMjoxMTo0MCBQTTszOzM0MzM="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTk0SVEyQkg7MjAyMy0wOS0yMTsxMjo0ODoyNiBQTTsyOzM0MjE="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLURQNVVKUVI7MjAyMy0wOS0yMTswODoxMjo1OCBQTTsxOzM0OTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="nod" type="Real" array="False" size=""/>
+            <declare name="grossincome" type="Real" array="False" size=""/>
+            <declare name="Adjgrossincome" type="Real" array="False" size=""/>
+            <declare name="incometax" type="Real" array="False" size=""/>
+            <declare name="taxrate" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="nod"/>
+            <input variable="grossincome"/>
+            <assign variable="Adjgrossincome" expression="grossincome - nod*12000"/>
+            <if expression="Adjgrossincome&gt;50000">
+                <then>
+                    <assign variable="taxrate" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="taxrate" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="incometax" expression="(adjgrossincome * taxrate)"/>
+            <if expression="incometax&lt;0">
+                <then>
+                    <assign variable="incometax" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Your lastname is&quot; &amp;lastname" newline="True"/>
+            <output expression="&quot; Your grossincome is&quot; &amp;grossincome" newline="True"/>
+            <output expression="&quot;The number of dependants is&quot; &amp;nod" newline="True"/>
+            <output expression="&quot;Your adjgrossincome is&quot; &amp;Adjgrossincome" newline="True"/>
+            <output expression="&quot;Your income tax will be&quot; &amp;incometax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

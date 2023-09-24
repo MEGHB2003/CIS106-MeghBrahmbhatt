@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 07:34:57 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9DMzVQRk87MjAyMy0wOS0yMDswNjoyMjoyNyBQTTszMzM1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU9DMzVQRk87MjAyMy0wOS0yMDswNjo0NzoyMCBQTTsxOzM0NDM="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVZER1ZHOUg7MjAyMy0wOS0yMDswNzozNDo1NyBQTTsyOzM0ODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nob" type="Real" array="False" size=""/>
+            <declare name="cpb" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="sc" type="Real" array="False" size=""/>
+            <input variable="nob"/>
+            <input variable="cpb"/>
+            <assign variable="total" expression="(nob * cpb)"/>
+            <if expression="total&gt;50">
+                <then>
+                    <assign variable="sc" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="sc" expression="25.00"/>
+                </else>
+            </if>
+            <output expression="&quot;Your order total is&quot; &amp;total" newline="True"/>
+            <output expression="&quot;Your shipping charge is&quot; &amp;sc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
