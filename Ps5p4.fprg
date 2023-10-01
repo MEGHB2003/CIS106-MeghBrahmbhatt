@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 08:41:41 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUtLU0tIUU07MjAyMy0wOS0yNzswODoyODoyNCBBTTszMzkx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUtLU0tIUU07MjAyMy0wOS0yNzswODo0MTo0MSBBTTsyOzM0OTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="notick" type="Real" array="False" size=""/>
+            <declare name="priceperticket" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="notick"/>
+            <if expression="notick&gt;= 25">
+                <then>
+                    <assign variable="priceperticket" expression="50.00"/>
+                </then>
+                <else>
+                    <if expression="notick&gt;= 10">
+                        <then>
+                            <assign variable="priceperticket" expression="60.00"/>
+                        </then>
+                        <else>
+                            <if expression="notick&gt;=5">
+                                <then>
+                                    <assign variable="priceperticket" expression="70.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="priceperticket" expression="75.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="(priceperticket * notick)"/>
+            <output expression="&quot;The number of tickets you have are&quot; &amp;notick" newline="True"/>
+            <output expression="&quot;The price per ticket is&quot; &amp;priceperticket" newline="True"/>
+            <output expression="&quot; Your total cost will be&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
