@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-05 03:15:58 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU8xMkJNNkg7MjAyMy0xMC0wNTswMjo0MToyMiBQTTszMjkw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU8xMkJNNkg7MjAyMy0xMC0wNTswMzoxNTo1OCBQTTsxOzM0MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="startv" type="Integer" array="False" size=""/>
+            <declare name="stopv" type="Integer" array="False" size=""/>
+            <declare name="incrv" type="Integer" array="False" size=""/>
+            <input variable="startv"/>
+            <input variable="stopv"/>
+            <input variable="incrv"/>
+            <while expression="startv&lt;=stopv">
+                <output expression="&quot;Loop + start value&quot; &amp;startv" newline="True"/>
+                <assign variable="startv" expression="startv + incrv"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
